@@ -1,4 +1,6 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import firebase from 'firebase';
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyBlSeVHUj2Zd_J_aZeoXQ8OAgQS52UE5GU",
     authDomain: "telegram-app-abcf2.firebaseapp.com",
@@ -9,3 +11,11 @@ const firebaseConfig = {
     appId: "1:468884544679:web:18f09f302e48b4fa680f82",
     measurementId: "G-GEB9ETDKYY"
   };
+
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
+  const db = firebaseApp.firestore();
+  const auth = firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  export { auth, provider };
+  export default db;

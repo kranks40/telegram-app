@@ -14,7 +14,7 @@
     justify-content: space-between;
 }
 
-.mainthread__header__content {
+.mainthread__header__contents {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -23,7 +23,16 @@
     padding: 10px;
 }
 
-.mainthread__header__content__info > h5 {
-    
+.mainthread__header__contents__info > h4 {
+    font-weight: 500;
+    color: gray;
+}
+
+.mainthread__header__details {
+    color: white;
+}
+
+.mainthread__header__details:hover {
+    color: rgba(1, 150, 199);
 }
 
