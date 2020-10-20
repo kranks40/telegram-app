@@ -1,10 +1,11 @@
 import React from 'react';
+import Telegram from './components/Telegram';
 
 
 function App() {
   return (
     <div className="app">
-      <h1>Welcome to the Telegram App</h1>
+      <Telegram />
     </div>
   );
 }

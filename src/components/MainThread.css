@@ -1,0 +1,29 @@
+.mainthread {
+    /* background-color: white; */
+    display: flex;
+    flex: .65;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.mainthread__header {
+    display: flex;
+    border-bottom: 1px solid rgba(190, 190, 190, .1);
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.mainthread__header__content {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content:center ;
+    color: white;
+    padding: 10px;
+}
+
+.mainthread__header__content__info > h5 {
+    
+}
+
