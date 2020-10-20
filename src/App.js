@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Telegram from './components/Telegram';
 import { selectUser, login, logout } from './features/userSlice';
 import { auth } from './utils/firebase';
+import './App.css';
 
 
 function App() {

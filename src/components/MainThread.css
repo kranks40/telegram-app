@@ -36,3 +36,46 @@
     color: rgba(1, 150, 199);
 }
 
+.mainthread__messages {
+    flex: 1;
+    overflow: scroll;
+}
+
+.mainthread__header::-webkit-scrollbar {
+    display: none;
+}
+
+.mainthread__input {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-top: 1px solid rgba(190, 190, 190, .1);
+}
+
+.mainthread__input > form {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.mainthread__input > form > input {
+    width: 98%;
+    outline-width: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 5px;
+    color: white;
+}
+
+.mainthread__input > form > button {
+    color: white;
+}
+
+.mainthread__input > form >button:hover {
+    color: rgb(2, 150, 199);
+}
+
+
+
