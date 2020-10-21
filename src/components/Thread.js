@@ -1,15 +1,40 @@
 import { Avatar } from '@material-ui/core';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setThread } from '../features/threadSlices';
+import db from '../utils/firebase';
 import './Thread.css';
 
-function Thread() {
+function Thread({ id, threadName, message }) {
+    const dispatch = useDispatch();
+    const [ threadInfo, setThreadInfo ] = useState([]);
+
+    useEffect(() => {
+        db.collection('threads')
+        .doc(id)
+        .collection('messages')
+        .orderBy('timestamp', 'desc')
+        .onSnapshot((snapshot) =>
+        setThreadInfo(snapshot.docs.map((doc) => doc.data()))
+        );
+    }, [id]);
+
+
     return (
-        <div className='thread'>
-            <Avatar/>
+        <div className='thread' onClick={() =>
+        dispatch(
+            setThread({
+                threadId: id,
+                threadName: threadName,
+             })
+        )}>
+            <Avatar src={threadInfo[0]?.photo}/>
             <div className='thread__details'>
-                <h3>Message</h3>
-                <p>This is the Info</p>
-                <small className='thread__timestamp'>timestamp</small>
+                 <h3>{threadName}</h3>
+                <p>{message}</p>
+                <small className='thread__timestamp'>
+                     {new Date(threadInfo[0]?.timestamp?.toDate()).toLocaleString()}                
+                </small>
             </div>
         </div>
     );

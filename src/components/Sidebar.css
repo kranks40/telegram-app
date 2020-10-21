@@ -1,6 +1,6 @@
 .sidebar {
     display: flex;
-    flex: 0.25;
+    flex: 0.45;
     height: 100vh;
     flex-direction: column;
     border-right: 1px solid rgba(190, 190, 190, .1);
@@ -55,7 +55,7 @@
 
 .sidebar__bottom__avatar:hover {
     cursor: pointer;
-    opacity: .5;
+    opacity: .3;
 }
 
 .sidebar__bottom > button {

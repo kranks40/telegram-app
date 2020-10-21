@@ -1,5 +1,4 @@
 .mainthread {
-    /* background-color: white; */
     display: flex;
     flex: .65;
     flex-direction: column;
@@ -12,6 +11,7 @@
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    /* padding: 10px 10px; */
 }
 
 .mainthread__header__contents {
@@ -20,16 +20,22 @@
     align-content: center;
     justify-content:center ;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
-.mainthread__header__contents__info > h4 {
+.mainthread__header__contents__info > h4  {
     font-weight: 500;
-    color: gray;
+    color: white;
+    padding: 5px;
+}
+
+.mainthread__header__contents__info > h5 {
+    /* padding: 5px; */
+    align-content: center;
 }
 
 .mainthread__header__details {
-    color: white;
+    color: blue;
 }
 
 .mainthread__header__details:hover {
@@ -41,7 +47,7 @@
     overflow: scroll;
 }
 
-.mainthread__header::-webkit-scrollbar {
+.mainthread__messages::-webkit-scrollbar{
     display: none;
 }
 

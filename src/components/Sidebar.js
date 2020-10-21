@@ -20,7 +20,7 @@ function Sidebar() {
         }))))
     }, []);
 
-    const addThread =() => {
+    const addThread = () => {
         const threadName = prompt('Enter a thread name?');
         if(threadName) {
             db.collection('threads').add({
